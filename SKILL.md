@@ -85,6 +85,7 @@ powershell -ExecutionPolicy Bypass -File ~/.claude/skills/github-cli/scripts/ver
 | `/github-attestation` | 认证验证 | `/github-attestation verify app.exe` |
 | `/github-alias` | 别名管理 | `/github-alias set co pr checkout` |
 | `/github-codespace` | Codespaces 管理 | `/github-codespace create` |
+| `/github-star` | Star 管理 | `/github-star list --limit 10` |
 
 ## /github-repo 技能详情
 
@@ -192,7 +193,8 @@ gh pr list --json | powershell -File ~/.claude/skills/github-cli/lib/output-form
 │   ├── github-ruleset.md              # 规则集管理
 │   ├── github-attestation.md          # 认证验证
 │   ├── github-alias.md                # 别名管理
-│   └── github-codespace.md            # Codespaces 管理
+│   ├── github-codespace.md            # Codespaces 管理
+│   └── github-star.md                 # Star 管理
 ├── lib/                               # 共享库 (PowerShell)
 │   ├── auth-manager.ps1              # 认证管理
 │   └── output-formatter.ps1          # 输出格式化
